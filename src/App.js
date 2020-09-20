@@ -43,7 +43,7 @@ export default class App extends Component {
 		return (
 			<>
 				<div id="page-shadow"></div>
-				<HashRouter basename="/mr-red-fanpage">
+				<HashRouter>
 					<Route
 						render={({location}) => {
 							return (
