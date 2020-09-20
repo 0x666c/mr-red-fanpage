@@ -27,6 +27,9 @@
 	width: 64px;
 
 	animation: rotation 60s linear infinite;
+	backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    
 	transition: transform 100ms linear;
 }
 #flying-crewmates > img:nth-child(even) {
