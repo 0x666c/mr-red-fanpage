@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap");
+
+@keyframes slidein-top {
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes slidein-bottom {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes slidein-left {
+	from {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes slidein-right {
+	from {
+		opacity: 0;
+		transform: translateX(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	font-family: "Comic Neue";
+	margin: 0;
+	overflow: hidden;
+}
+#page-shadow {
+	box-shadow: inset 0 -85px 1000px 45px rgba(0, 0, 0, 0.22);
+    height: 100vh;
+    pointer-events: none;
+}
+.page-container {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow-x: hidden;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+	padding: 0.8em;
+	margin-left: 18px;
+	margin-right: 18px;
+
+	border: 2px solid black;
+	border-radius: 9px;
+	/* background-color: white; */
+	background-color: transparent;
+
+	font-size: 18px;
+	font-family: "Comic Neue";
+	font-weight: bold;
+	color: black;
+	letter-spacing: 0.14em;
+
+	transition: transform 100ms linear;
+}
+button:hover {
+	transition: transform 100ms linear;
+	transform: scale(1.06);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Down */
+.pageSliderDown-enter {
+	transform: translate3d(0, 100%, 0);
 }
 
-.App-link {
-  color: #61dafb;
+.pageSliderDown-enter.pageSliderDown-enter-active {
+	transform: translate3d(0, 0, 0);
+	transition: all 500ms ease-in-out;
+}
+.pageSliderDown-exit {
+	transform: translate3d(0, 0, 0);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pageSliderDown-exit.pageSliderDown-exit-active {
+	transform: translate3d(0, -100%, 0);
+	transition: all 500ms ease-in-out;
+}
+
+/* Up */
+.pageSliderUp-enter {
+	transform: translate3d(0, -100%, 0);
+}
+
+.pageSliderUp-enter.pageSliderUp-enter-active {
+	transform: translate3d(0, 0, 0);
+	transition: all 500ms ease-in-out;
+}
+.pageSliderUp-exit {
+	transform: translate3d(0, 0, 0);
+}
+
+.pageSliderUp-exit.pageSliderUp-exit-active {
+	transform: translate3d(0, 100%, 0);
+	transition: all 500ms ease-in-out;
+}
+
+/* Left */
+.pageSliderLeft-enter {
+	transform: translate3d(-100%, 0, 0);
+}
+
+.pageSliderLeft-enter.pageSliderLeft-enter-active {
+	transform: translate3d(0, 0, 0);
+	transition: all 500ms ease-in-out;
+}
+.pageSliderLeft-exit {
+	transform: translate3d(0, 0, 0);
+}
+
+.pageSliderLeft-exit.pageSliderLeft-exit-active {
+	transform: translate3d(100%, 0, 0);
+	transition: all 500ms ease-in-out;
 }

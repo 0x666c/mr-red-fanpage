@@ -1,0 +1,171 @@
+#comic-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE 10+ */
+}
+#comic-page::-webkit-scrollbar {
+	display: none; /* Safari and Chrome */
+}
+
+.comic-page-center {
+	margin-top: 8vh;
+	padding-bottom: 6vh;
+	margin-left: 26vw;
+	margin-right: 26vw;
+}
+.comic-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 70px;
+}
+
+.comic-tile {
+	margin-left: 4vw;
+	margin-right: 4vw;
+	mask: circle(20% at bottom left);
+	position: relative;
+	width: 14vw;
+	padding: 30px;
+	background-color: transparent;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+	border: 1px solid rgba(0, 0, 0, 0.8);
+	border-radius: 20px;
+
+	transition: transform 100ms linear;
+}
+.comic-tile:first-child {
+	animation: slidein-left 1200ms ease-out;
+}
+.comic-tile:last-child {
+	animation: slidein-right 1200ms ease-out;
+}
+
+.comic-tile:hover {
+	transition: transform 100ms linear;
+	transform: scale(1.05);
+}
+.comic-tile::after {
+	content: " ";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 25px;
+	height: 25px;
+}
+
+.comic-tile > img {
+	filter: blur(13px); /* saturate(95%) brightness(95%); */
+	border-radius: 5px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+.image-label {
+	font-weight: bold;
+	padding-left: 12px;
+	padding-right: 12px;
+	word-wrap: break-word;
+	position: absolute;
+	font-size: 210%;
+	color: black;
+	text-shadow: 0 0 8px white;
+	top: 9%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.upvote-container {
+	position: absolute;
+	bottom: 1.8%;
+	left: 3%;
+	right: 0;
+	text-align: start;
+
+	display: flex;
+}
+.upvote-arrow {
+	width: 28px;
+	height: 28px;
+	filter: invert(50%) sepia(59%) saturate(4828%) hue-rotate(339deg) brightness(97%) contrast(93%);
+}
+.upvotes {
+	letter-spacing: 1px;
+	color: black;
+	font-weight: bold;
+	display: block;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#comic-back {
+	position: fixed;
+	bottom: max(16px, 3.3vh);
+	right: max(22px, 4.2vw);
+	background-color: transparent;
+	margin-right: 0;
+}
+#comic-back > button {
+	margin-right: 0;
+}
+
+#comic-more {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 1.4em;
+
+	transition: opacity 175ms linear;
+}
+#comic-more > img {
+	width: 32px;
+	height: 32px;
+
+	animation: up-down 2.5s ease-in-out infinite;
+}
+@keyframes up-down {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(10px);
+	}
+}
+
+@media (max-width: 1000px) {
+	.comic-page-center {
+		margin-left: 18vw;
+		margin-right: 18vw;
+	}
+	.image-label {
+		top: 15px;
+		font-size: 180%;
+	}
+}
+
+@media (max-width: 550px) {
+	.comic-page-center {
+		padding-bottom: 11vh;
+	}
+	.comic-row {
+		flex-direction: column;
+		margin-bottom: 0;
+	}
+	.comic-tile {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 8vw;
+		padding: 10px;
+		width: 90%;
+		height: 50vw;
+	}
+	.comic-tile > img {
+		margin-top: 9%;
+		width: 80%;
+		height: 80%;
+	}
+}
