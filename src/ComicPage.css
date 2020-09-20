@@ -28,7 +28,8 @@
 	margin-right: 4vw;
 	mask: circle(20% at bottom left);
 	position: relative;
-	width: 14vw;
+    width: 14vw;
+	height: 14vw;
 	padding: 30px;
 	background-color: transparent;
 	box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
