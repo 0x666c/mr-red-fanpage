@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f8fac0b908b2b0c430884cfbe2d59e1c",
+    "revision": "ec70fdac4a64ed8f912f0e5b116c3ba6",
     "url": "/mr-red-fanpage/index.html"
   },
   {
-    "revision": "bc75027768a1c005c5a1",
-    "url": "/mr-red-fanpage/static/css/main.20786036.chunk.css"
+    "revision": "ed20df91749c4f41cc19",
+    "url": "/mr-red-fanpage/static/css/main.348724ed.chunk.css"
   },
   {
     "revision": "ff73954e3113e322b253",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mr-red-fanpage/static/js/2.404d994b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bc75027768a1c005c5a1",
+    "revision": "ed20df91749c4f41cc19",
     "url": "/mr-red-fanpage/static/js/main.8def80a9.chunk.js"
   },
   {
