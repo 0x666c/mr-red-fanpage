@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/mr-red-fanpage/static/css/main.20786036.chunk.css",
+    "main.js": "/mr-red-fanpage/static/js/main.e901ddae.chunk.js",
+    "main.js.map": "/mr-red-fanpage/static/js/main.e901ddae.chunk.js.map",
+    "runtime-main.js": "/mr-red-fanpage/static/js/runtime-main.d5e9554f.js",
+    "runtime-main.js.map": "/mr-red-fanpage/static/js/runtime-main.d5e9554f.js.map",
+    "static/js/2.404d994b.chunk.js": "/mr-red-fanpage/static/js/2.404d994b.chunk.js",
+    "static/js/2.404d994b.chunk.js.map": "/mr-red-fanpage/static/js/2.404d994b.chunk.js.map",
+    "index.html": "/mr-red-fanpage/index.html",
+    "precache-manifest.d5a86ea3a0e3bd9a43a310806e934d47.js": "/mr-red-fanpage/precache-manifest.d5a86ea3a0e3bd9a43a310806e934d47.js",
+    "service-worker.js": "/mr-red-fanpage/service-worker.js",
+    "static/css/main.20786036.chunk.css.map": "/mr-red-fanpage/static/css/main.20786036.chunk.css.map",
+    "static/js/2.404d994b.chunk.js.LICENSE.txt": "/mr-red-fanpage/static/js/2.404d994b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d5e9554f.js",
+    "static/js/2.404d994b.chunk.js",
+    "static/css/main.20786036.chunk.css",
+    "static/js/main.e901ddae.chunk.js"
+  ]
+}
