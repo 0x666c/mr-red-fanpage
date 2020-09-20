@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/mr-red-fanpage/precache-manifest.76a53c54d9891bc5627bb8e85151b799.js"
+  "/mr-red-fanpage/precache-manifest.418ffa5a622d7b1cce09eb3fa51c95da.js"
 );
 
 self.addEventListener('message', (event) => {
